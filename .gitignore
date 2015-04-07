@@ -41,7 +41,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.dll
 *.pdb
 HI.InstallPackage/bin/Debug/HtmlAgilityPack.xml
 HI.InstallPackage/bin/Debug/Lucene.Net.xml
@@ -56,3 +55,21 @@ HI.InstallPackage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 HI.InstallPackage/obj/Debug/HI.InstallPackage.csproj.FileListAbsolute.txt
 HI.InstallPackage/obj/Debug/HI.InstallPackage.csprojResolveAssemblyReference.cache
 HI.InstallPackage/HI.InstallPackage.csproj.user
+HI.InstallPackage/bin/Debug/ComponentArt.Web.UI.dll
+HI.InstallPackage/bin/Debug/HtmlAgilityPack.dll
+HI.InstallPackage/bin/Debug/ITHit.WebDAV.Server.dll
+HI.InstallPackage/bin/Debug/Lucene.Net.dll
+HI.InstallPackage/bin/Debug/Mvp.Xml.dll
+HI.InstallPackage/bin/Debug/Newtonsoft.Json.dll
+HI.InstallPackage/bin/Debug/RadEditor.Net2.dll
+HI.InstallPackage/bin/Debug/Sitecore.Analytics.dll
+HI.InstallPackage/bin/Debug/Sitecore.Client.dll
+HI.InstallPackage/bin/Debug/Sitecore.Kernel.dll
+HI.InstallPackage/bin/Debug/Sitecore.Logging.dll
+HI.InstallPackage/bin/Debug/Sitecore.NVelocity.dll
+HI.InstallPackage/bin/Debug/Sitecore.Zip.dll
+HI.InstallPackage/bin/Debug/Stimulsoft.Base.dll
+HI.InstallPackage/bin/Debug/Stimulsoft.Report.dll
+HI.InstallPackage/bin/Debug/Stimulsoft.Report.Web.dll
+HI.InstallPackage/bin/Debug/Stimulsoft.Report.WebDesign.dll
+HI.InstallPackage/bin/Debug/Telerik.Web.UI.dll
