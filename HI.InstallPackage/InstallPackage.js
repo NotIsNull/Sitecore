@@ -28,16 +28,12 @@
         }
     };
 
-    ip.UpdateMessage = function (message) {
-        if (scForm === undefined) {
-            return;
-        }
-        var messageElement = scForm.browser.getControl('PackageInstallMessage');
-        if (messageElement === undefined || messageElement === null) {
-            return;
-        }
-        var newContent = (messageElement.innerHTML + message);
-        messageElement.innerHTML = newContent;
+    ip.UpdateCountMessage = function (message) {
+        ip.UpdateMessage('ItemCountMessage', message, false);
+    };
+
+    ip.UpdateLogMessage = function(message) {
+        ip.UpdateMessage('PackageInstallMessage', message, true);
 
         // scroll to the bottom
         var scrollContainer = scForm.browser.getControl('ScrollContainer');
@@ -46,5 +42,33 @@
         }
         scrollContainer.scrollTop = scrollContainer.scrollHeight;
     };
+
+    ip.UpdateMessage = function (controlId, message, append) {
+        if (scForm === undefined) {
+            return;
+        }
+        var messageElement = scForm.browser.getControl(controlId);
+        if (messageElement === undefined || messageElement === null) {
+            return;
+        }
+        var newContent = append ? (messageElement.innerHTML + message) : message;
+        messageElement.innerHTML = newContent;
+    };
+
+    ip.SetTimer = function () {
+        window.setTimeout(ip.CheckStatus, 500);
+    };
+
+    ip.CheckStatus = function () {
+        if (scForm === undefined) {
+            return;
+        }
+        var monitor = document.getElementById('MonitorLogEdit');
+        if (monitor.value === 'true') {
+            scForm.invoke("installer:CheckLogProgress");
+            ip.SetTimer();
+        }
+    };
+
 
 })(window, window.HI || (window.HI = {}));

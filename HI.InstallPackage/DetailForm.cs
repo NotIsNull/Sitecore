@@ -131,7 +131,7 @@ namespace HI.InstallPackage
 
                 GetCurrentLogPosition();
                 SetInstallingPackageStatus(true);
-                CheckLogProgress();
+                Context.ClientPage.ClientResponse.Eval("window.HI.InstallPackage.CheckStatus()");
             }
             else
             {
@@ -236,7 +236,8 @@ namespace HI.InstallPackage
             }
         }
 
-        private void CheckLogProgress()
+        [HandleMessage("installer:CheckLogProgress")]
+        private void CheckLogProgress(Message message)
         {
             string messageContent;
             long logStartingPoint;
@@ -249,11 +250,6 @@ namespace HI.InstallPackage
             var messageList = CleanMessageContent(messageContent);
 
             DisplayLogMessages(messageList);
-
-            if (MonitorLog)
-            {
-                SheerResponse.Timer("CheckLogProgress", SleepTime);
-            }
         }
 
         #endregion
