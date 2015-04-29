@@ -191,11 +191,11 @@
 				<Edit ID="TrimLogContentsEdit" Hidden="True" />
 				<Edit ID="InitialLoggingLevelEdit" Hidden="True" />
 				<GridPanel Width="100%">
-					<Border ID="Progress" Class="meter" Margin="16px" Align="center" GridPanel.Align="center" Visible="False">
-						<Literal ID="ProgressIndicator" Style="width: 0%;" />
+					<Border ID="Progress" Class="meter" Margin="16px" Align="center" GridPanel.Align="center">
+						<span ID="ProgressIndicator" style="width: 0%;" />
 					</Border>
 					<Border Align="center" GridPanel.Align="center">
-						<Literal ID="ItemCountMessage" Align="left" GridPanel.Align="left" Style="font-weight: bold;" Text="0 Items Installed (0 %)" />
+						<span ID="ItemCountMessage" style="font-weight: bold;">0 Items Installed (0 %)</span>
 					</Border>
 					<div class="statusContainer">
 						<div ID="InstallingStatus" class="status installing" style="width: 32.5%;">Installing Items</div>
