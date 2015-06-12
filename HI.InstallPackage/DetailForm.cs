@@ -72,7 +72,9 @@ namespace HI.InstallPackage
         {
             get
             {
-                return !string.IsNullOrEmpty(InstalledItemCountEdit.Value) ? int.Parse(InstalledItemCountEdit.Value) : 0;
+                var count = !string.IsNullOrEmpty(InstalledItemCountEdit.Value) ? int.Parse(InstalledItemCountEdit.Value) : 0;
+                var total = TotalItemCount;
+                return count <= total ? count : total;
             }
             set { InstalledItemCountEdit.Value = value.ToString(CultureInfo.InvariantCulture); }
         }
