@@ -1,75 +1,12 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+#Junk Files
+*.DS_Store
+[Tt]humbs.db
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-*.pdb
-HI.InstallPackage/bin/Debug/HtmlAgilityPack.xml
-HI.InstallPackage/bin/Debug/Lucene.Net.xml
-HI.InstallPackage/bin/Debug/Newtonsoft.Json.xml
-HI.InstallPackage/bin/Debug/Sitecore.Client.xml
-HI.InstallPackage/bin/Debug/Sitecore.Kernel.xml
-HI.InstallPackage/bin/Debug/Telerik.Web.UI.xml
-HI.InstallPackage/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-HI.InstallPackage/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-HI.InstallPackage/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-HI.InstallPackage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-HI.InstallPackage/obj/Debug/HI.InstallPackage.csproj.FileListAbsolute.txt
-HI.InstallPackage/obj/Debug/HI.InstallPackage.csprojResolveAssemblyReference.cache
-HI.InstallPackage/HI.InstallPackage.csproj.user
-HI.InstallPackage/bin/Debug/ComponentArt.Web.UI.dll
-HI.InstallPackage/bin/Debug/HtmlAgilityPack.dll
-HI.InstallPackage/bin/Debug/ITHit.WebDAV.Server.dll
-HI.InstallPackage/bin/Debug/Lucene.Net.dll
-HI.InstallPackage/bin/Debug/Mvp.Xml.dll
-HI.InstallPackage/bin/Debug/Newtonsoft.Json.dll
-HI.InstallPackage/bin/Debug/RadEditor.Net2.dll
-HI.InstallPackage/bin/Debug/Sitecore.Analytics.dll
-HI.InstallPackage/bin/Debug/Sitecore.Client.dll
-HI.InstallPackage/bin/Debug/Sitecore.Kernel.dll
-HI.InstallPackage/bin/Debug/Sitecore.Logging.dll
-HI.InstallPackage/bin/Debug/Sitecore.NVelocity.dll
-HI.InstallPackage/bin/Debug/Sitecore.Zip.dll
-HI.InstallPackage/bin/Debug/Stimulsoft.Base.dll
-HI.InstallPackage/bin/Debug/Stimulsoft.Report.dll
-HI.InstallPackage/bin/Debug/Stimulsoft.Report.Web.dll
-HI.InstallPackage/bin/Debug/Stimulsoft.Report.WebDesign.dll
-HI.InstallPackage/bin/Debug/Telerik.Web.UI.dll
+#Visual Studio Files
+.vs/
+[Oo]bj
+[Bb]in
+[Dd]ebug
+[Bb]uild/
+*.user
+*.suo
