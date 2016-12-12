@@ -1,94 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
 	<Installer.InstallPackage>
-		<Stylesheet>
-			.meter {
-			height: 20px;  /* Can be anything */
-			position: relative;
-			border: 1px solid #999;
-			}
-			.meter > span {
-			display: block;
-			height: 100%;
-			background-color: rgb(43,194,83);
-			position: absolute;
-			overflow: hidden;
-			}
-			.meter > span:after {
-			content: "";
-			position: absolute;
-			top: 0; left: 0; bottom: 0; right: 0;
-			z-index: 1;
-			overflow: hidden;
-			}
-			.statusContainer {
-			margin: 16px 16px 0 16px;
-			}
-			.statusContainer .status {
-			display: block:
-			width: 32.6%;
-			padding: 1px;
-			margin: 1px;
-			float: left;
-			text-align: center;
-			background-color: rgb(35,35,35);
-			}
-			.statusContainer .status.active {
-			background-color: rgb(43,194,83);
-			}
-			.messageList {
-			display: block;
-			margin: 0;
-			padding: 0;
-			width: 100%;
-			}
-			.messageList li {
-			display: list-item;
-			padding: 0.6em;
-			list-style-type: none;
-			border-bottom: solid 1px #999;
-			}
-			.messageList li.info {
-			background-color: rgb(152,251,152);
-			}
-			.messageList li.warn {
-			background-color: rgb(233,214,107);
-			}
-			.messageList li.error {
-			background-color: rgb(175,30,44);
-			}
-			#LicenseAgreement {
-			overflow: auto;
-			padding-right: 8px;
-			margin-bottom: 10px;
-			height: 100%;
-			}
-			.scCheckGroup {
-			margin-top: 10px;
-			}
-			.scRadioGroup > div, .scCheckGroup > div{
-			padding: 5px 0;
-			}
-			.scLicenseAgreementContainer{
-			overflow: hidden;
-			padding-bottom: 55px;
-			}
-			.scSpinner{
-			display: none;
-			}
-			.scFieldLabel{
-			display: none;
-			}
-			.scScrollbox {
-			overflow-x: hidden;
-			overflow-y: auto;
-			}
-			.scStretchAbsolute{
-			position: relative!important;
-			}
-		</Stylesheet>
 		<Script Src="/sitecore/shell/Applications/Install/installer.js" />
 		<Script Src="/sitecore/shell/Override/InstallPackage.js" type="text/javascript" />
+		<Stylesheet>
+			.meter {
+				height: 20px;  /* Can be anything */
+				position: relative;
+				border: 1px solid #999;
+			}
+			.meter > span {
+				display: block;
+				height: 100%;
+				background-color: rgb(43,194,83);
+				position: absolute;
+				overflow: hidden;
+			}
+			.meter > span:after {
+				content: "";
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				z-index: 1;
+				overflow: hidden;
+			}
+			.statusContainer {
+				margin: 16px 16px 0 16px;
+			}
+			.statusContainer .status {
+				display: block:
+				width: 32.6%;
+				padding: 1px;
+				margin: 1px;
+				float: left;
+				text-align: center;
+				background-color: rgb(35,35,35);
+			}
+			.statusContainer .status.active {
+				background-color: rgb(43,194,83);
+			}
+			.messageList {
+				display: block;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+			.messageList li {
+				display: list-item;
+				padding: 0.6em;
+				list-style-type: none;
+				border-bottom: solid 1px #999;
+			}
+			.messageList li.info {
+				background-color: rgb(152,251,152);
+			}
+			.messageList li.warn {
+				background-color: rgb(233,214,107);
+			}
+			.messageList li.error {
+				background-color: rgb(175,30,44);
+			}
+			#LicenseAgreement {
+				overflow: auto;
+				padding-right: 8px;
+				margin-bottom: 10px;
+				height: 100%;
+			}
+			.scCheckGroup {
+				margin-top: 10px;
+			}
+			.scRadioGroup > div, .scCheckGroup > div{
+				padding: 5px 0;
+			}
+			.scLicenseAgreementContainer{
+				overflow: hidden;
+				padding-bottom: 55px;
+			}
+			.scSpinner{
+				display: none;
+			}
+			.scFieldLabel{
+				display: none;
+			}
+			.scScrollbox {
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+			.scStretchAbsolute{
+				position: relative!important;
+			}
+		</Stylesheet>
 		<WizardForm Application="Tools/Installer/InstallationWizard" CodeBeside="HI.InstallPackage.DetailForm,HI.InstallPackage">
 
 			<WizardFormPage ID="LoadPackage" Header="Install a Package" Text="Select a package to install.">
