@@ -27,7 +27,7 @@ namespace HI.InstallPackage
             }
             catch (Exception ex)
             {
-                throw new Exception(string.Format("Error opening FileStream to {0}", FilePath), ex);
+                throw new Exception($"Error opening FileStream to {FilePath}", ex);
             }
         }
 
@@ -115,10 +115,7 @@ namespace HI.InstallPackage
 
         protected virtual void OnLogChanged(LogChangedEventArgs e)
         {
-            if (LogChanged != null)
-            {
-                LogChanged(this, e);
-            }
+            LogChanged?.Invoke(this, e);
         }
 
         public event LogChangedEventHandler LogChanged;

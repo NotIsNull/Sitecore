@@ -344,31 +344,27 @@ namespace HI.InstallPackage
 
         protected void UpdateProgress(decimal percentage)
         {
-            var progress = String.Format("{0:0%}", percentage);
+            var progress = $"{percentage:0%}";
 
-            var countMessage = string.Format("{0} of {1} Item{2} Installed ({3})",
-                InstalledItemCount,
-                TotalItemCount,
-                TotalItemCount == 1 ? "" : "s",
-                percentage.ToString("P0"));
+            var countMessage = $"{InstalledItemCount} of {TotalItemCount} Item{(TotalItemCount == 1 ? "" : "s")} Installed ({percentage.ToString("P0")})";
 
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.Progress('{0}')", progress));
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.UpdateCountMessage('{0}')", countMessage));
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.Progress('{progress}')");
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.UpdateCountMessage('{countMessage}')");
         }
 
         protected void SetInstallingPackageStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.SetStatus('InstallingStatus', {0})", active ? "true" : "false"));
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('InstallingStatus', {(active ? "true" : "false")})");
         }
 
         protected void SetInstallingSecurityStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.SetStatus('SecurityStatus', {0})", active ? "true" : "false"));
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('SecurityStatus', {(active ? "true" : "false")})");
         }
 
         protected void SetIndexUpdateStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.SetStatus('IndexStatus', {0})", active ? "true" : "false"));
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('IndexStatus', {(active ? "true" : "false")})");
         }
 
         protected void UpdateMessage(List<string> messageContent)
@@ -389,9 +385,9 @@ namespace HI.InstallPackage
                 {
                     lineClass = "error";
                 }
-                message = string.Format("{0}<li class=\"{1}\">{2}</li>", message, lineClass, line);
+                message = $"{message}<li class=\"{lineClass}\">{line}</li>";
             }
-            Context.ClientPage.ClientResponse.Eval(string.Format("window.HI.InstallPackage.UpdateLogMessage('{0}')", message));
+            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.UpdateLogMessage('{message}')");
         }
 
         #endregion

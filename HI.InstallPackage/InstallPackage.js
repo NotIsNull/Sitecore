@@ -5,11 +5,11 @@
         if (scForm === undefined) {
             return;
         }
-        var progressIndicator = scForm.browser.getControl('ProgressIndicator');
+        var progressIndicator = scForm.browser.getControl("ProgressIndicator");
         if (progressIndicator === undefined || progressIndicator === null) {
             return;
         }
-        progressIndicator.setStyle('width: ' + percentage);
+        progressIndicator.setStyle("width: " + percentage);
     };
 
     ip.SetStatus = function(elementId, active) {
@@ -22,21 +22,21 @@
         }
 
         if (active) {
-            statusElement.addClassName('active');
+            statusElement.addClassName("active");
         } else {
-            statusElement.removeClassName('active');
+            statusElement.removeClassName("active");
         }
     };
 
     ip.UpdateCountMessage = function (message) {
-        ip.UpdateMessage('ItemCountMessage', message, false);
+        ip.UpdateMessage("ItemCountMessage", message, false);
     };
 
     ip.UpdateLogMessage = function(message) {
-        ip.UpdateMessage('PackageInstallMessage', message, true);
+        ip.UpdateMessage("PackageInstallMessage", message, true);
 
         // scroll to the bottom
-        var scrollContainer = scForm.browser.getControl('ScrollContainer');
+        var scrollContainer = scForm.browser.getControl("ScrollContainer");
         if (scrollContainer === undefined || scrollContainer === null) {
             return;
         }
@@ -63,8 +63,8 @@
         if (scForm === undefined) {
             return;
         }
-        var monitor = document.getElementById('MonitorLogEdit');
-        if (monitor.value === 'true') {
+        var monitor = document.getElementById("MonitorLogEdit");
+        if (monitor.value === "true") {
             scForm.invoke("installer:CheckLogProgress");
             ip.SetTimer();
         }
