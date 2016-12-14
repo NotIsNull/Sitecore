@@ -132,7 +132,7 @@ namespace Sitecore.Sharedsource.DetailedPackageInstaller
 
                 GetCurrentLogPosition();
                 SetInstallingPackageStatus(true);
-                Context.ClientPage.ClientResponse.Eval("window.HI.InstallPackage.CheckStatus()");
+                Context.ClientPage.ClientResponse.Eval("window.SharedSource.InstallPackage.CheckStatus()");
             }
             else
             {
@@ -347,23 +347,23 @@ namespace Sitecore.Sharedsource.DetailedPackageInstaller
 
             var countMessage = $"{InstalledItemCount} of {TotalItemCount} Item{(TotalItemCount == 1 ? "" : "s")} Installed ({percentage.ToString("P0")})";
 
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.Progress('{progress}')");
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.UpdateCountMessage('{countMessage}')");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.Progress('{progress}')");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.UpdateCountMessage('{countMessage}')");
         }
 
         protected void SetInstallingPackageStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('InstallingStatus', {(active ? "true" : "false")})");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.SetStatus('InstallingStatus', {(active ? "true" : "false")})");
         }
 
         protected void SetInstallingSecurityStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('SecurityStatus', {(active ? "true" : "false")})");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.SetStatus('SecurityStatus', {(active ? "true" : "false")})");
         }
 
         protected void SetIndexUpdateStatus(bool active)
         {
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.SetStatus('IndexStatus', {(active ? "true" : "false")})");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.SetStatus('IndexStatus', {(active ? "true" : "false")})");
         }
 
         protected void UpdateMessage(List<string> messageContent)
@@ -386,7 +386,7 @@ namespace Sitecore.Sharedsource.DetailedPackageInstaller
                 }
                 message = $"{message}<li class=\"{lineClass}\">{line}</li>";
             }
-            Context.ClientPage.ClientResponse.Eval($"window.HI.InstallPackage.UpdateLogMessage('{message}')");
+            Context.ClientPage.ClientResponse.Eval($"window.SharedSource.InstallPackage.UpdateLogMessage('{message}')");
         }
 
         #endregion
